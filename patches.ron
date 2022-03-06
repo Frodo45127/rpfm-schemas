@@ -1,0 +1,29 @@
+(
+    patches: {
+        "warhammer_3": (
+            tables: {
+                "unit_special_abilities_tables": {
+                    "autoresolver_usage": {
+                        "explanation": "Confirmed crashes if left empty.",
+                        "not_empty": "true",
+                        "default_value": "default",
+                    },
+                },
+                "battle_set_pieces_tables": {
+                    "culture": {
+                        "default_value": "*",
+                        "not_empty": "true",
+                        "explanation": "This column crashes the game if left empty.",
+                    },
+                },
+                "agent_subtypes_tables": {
+                    "saving_settings": {
+                        "not_empty": "true",
+                        "default_value": "can_be_saved_loaded",
+                        "explanation": "This column is suspect of crashes when left empty.",
+                    },
+                },
+            },
+        ),
+    },
+)
