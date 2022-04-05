@@ -4,9 +4,52 @@
             tables: {
                 "unit_special_abilities_tables": {
                     "autoresolver_usage": {
-                        "explanation": "Confirmed crashes if left empty.",
                         "not_empty": "true",
                         "default_value": "default",
+                        "explanation": "Confirmed crashes if left empty.",
+                    },
+                },
+                "battle_entities_tables": {
+                    "locomotion_constant": {
+                        "default_value": "small_entity",
+                        "not_empty": "true",
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                    },
+                },
+                "battle_vortexs_tables": {
+                    "shape": {
+                        "not_empty": "true",
+                        "default_value": "circle",
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                    },
+                },
+                "pooled_resources_tables": {
+                    "scope": {
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                        "default_value": "FACTION",
+                        "not_empty": "true",
+                    },
+                    "income_policy": {
+                        "not_empty": "true",
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                        "default_value": "END_OF_ROUND",
+                    },
+                },
+                "land_units_tables": {
+                    "score_capture_tier": {
+                        "default_value": "domination_infantry",
+                        "not_empty": "true",
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                    },
+                    "key_building_capture_tier": {
+                        "not_empty": "true",
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                        "default_value": "medium",
+                    },
+                    "capture_tier": {
+                        "not_empty": "true",
+                        "explanation": "According to Mixu, this column crashes if empty.",
+                        "default_value": "medium",
                     },
                 },
                 "battle_set_pieces_tables": {
