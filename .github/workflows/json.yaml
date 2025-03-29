@@ -1,0 +1,28 @@
+name: ci
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Generate JSON files
+        run: |
+          ./ron2json/run.sh
+
+      - name: Commit and Push changes to json branch
+        run: |
+          git checkout -b json || git checkout json
+          git add .
+          git commit -m "update json files"
+          git push origin json --force
