@@ -69680,7 +69680,7 @@
                         default_value: None,
                         is_filename: false,
                         filename_relative_path: None,
-                        is_reference: None,
+                        is_reference: Some(("effects", "effect")),
                         lookup: None,
                         description: "",
                         ca_order: 0,
